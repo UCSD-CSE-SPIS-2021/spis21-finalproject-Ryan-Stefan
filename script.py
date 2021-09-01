@@ -93,19 +93,19 @@ def diagnosis(dictionaryOfInput):
   # Split test and train
   xTrain, xTest, yTrain, yTest = train_test_split(x, y, test_size=0.20, random_state = 0)
 
-  DF = pd.DataFrame(xTrain)
-  DF.to_csv(path_or_buf='test/xTrain.csv', index=False)
+  # DF = pd.DataFrame(xTrain)
+  # DF.to_csv(path_or_buf='test/xTrain.csv', index=False)
 
-  DF = pd.DataFrame(xTest)
-  DF.to_csv(path_or_buf='test/xTest.csv', index=False)
+  # DF = pd.DataFrame(xTest)
+  # DF.to_csv(path_or_buf='test/xTest.csv', index=False)
 
-  # Save output set
+  # # Save output set
 
-  DF = pd.DataFrame(yTrain)
-  DF.to_csv(path_or_buf='test/yTrain.csv', index=False)
+  # DF = pd.DataFrame(yTrain)
+  # DF.to_csv(path_or_buf='test/yTrain.csv', index=False)
 
-  DF = pd.DataFrame(yTest)
-  DF.to_csv(path_or_buf='test/yTest.csv', index=False)
+  # DF = pd.DataFrame(yTest)
+  # DF.to_csv(path_or_buf='test/yTest.csv', index=False)
 
   # Begin classification
 
