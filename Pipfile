@@ -1,3 +1,13 @@
 [requires]
-
 python_version = "3.8.3" 
+
+[packages]
+gunicorn = "==20.0.4"
+itsdangerous = "==1.1.0"
+sklearn = "*"
+pandas = "*"
+numpy = "*"
+Flask = "==1.1.2"
+Jinja2 = "==2.11.2"
+MarkupSafe = "==1.1.1"
+Werkzeug = "==1.0.1"
