@@ -9,7 +9,6 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 from sklearn.preprocessing import StandardScaler
-from matplotlib.colors import ListedColormap
 from sklearn import neighbors, datasets
 from sklearn.ensemble import RandomForestClassifier
 
@@ -50,9 +49,6 @@ def render_diagnosis_result():
           i += 1
 
         p, w, a = diagnosis(inputDict)
-
-
-
 
 
         return render_template('diagnosis_result.html', disease = p, warning = w, advice = a, input = inputString)
