@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+
+
+{% block title %}Your disease is:{% endblock %}
+
+
+
+{% block content %}
+
+<p> Your symptoms: {{ input }}. </p>
+<p> Your disease: {{ disease }}. </p>
+<p> {{warning}} </p>
+<p> {{advice}} </p>
+
+{% endblock %}

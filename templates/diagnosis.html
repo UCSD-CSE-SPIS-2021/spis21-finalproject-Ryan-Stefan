@@ -1,0 +1,546 @@
+{% extends "layout.html" %} {% block title %}Diagnosis{% endblock %} {% block content %}
+
+
+
+<p>Welcome!</p>
+
+
+<form action="/diagnosis-result">
+  <label for="symptoms">Choose up to 17 symptoms:</label>
+  <br></br>
+  <input type='checkbox' value='1' name='symptom1'>
+  <input type='hidden' value='0' name='symptom1'>
+  <label for="symptom1">Abdominal Pain</label>
+  <br></br>
+  <input type='checkbox' value='1' name='symptom2'>
+  <input type='hidden' value='0' name='symptom2'>
+  <label for="symptom2">Abnormal menstruation</label>
+  <br></br>
+  <input type='checkbox' value='1' name='symptom3'>
+  <input type='hidden' value='0' name='symptom3'>
+  <label for="symptom3">Acidity</label>
+  <br></br>
+  <input type='checkbox' value='1' name='symptom4'>
+  <input type='hidden' value='0' name='symptom4'>
+  <label for="symptom4">Acute liver failure</label>
+  <br></br>
+  <input type='checkbox' value='1' name='symptom5'>
+  <input type='hidden' value='0' name='symptom5'>
+  <label for="symptom5">Altered Sensorium </label>
+  <br></br>
+  <input type='checkbox' value='1' name='symptom6'>
+  <input type='hidden' value='0' name='symptom6'>
+  <label for="symptom6">anxiety</label>
+  <br></br>
+  <input type='checkbox' value='1' name='symptom7'>
+  <input type='hidden' value='0' name='symptom7'>
+  <label for="symptom7">Back pain</label>
+  <br></br>
+  <input type='checkbox' value='1' name='symptom8'>
+  <input type='hidden' value='0' name='symptom8'>
+  <label for="symptom8">Belly pain</label>
+  <br></br>
+  <input type='checkbox' value='1' name='symptom9'>
+  <input type='hidden' value='0' name='symptom9'>
+  <label for="symptom9">Blackheads</label>
+  <br></br>
+  <input type='checkbox' value='1' name='symptom10'>
+  <input type='hidden' value='0' name='symptom10'>
+  <label for="symptom10">Bladder discomfort</label>
+  <br></br>
+  <input type='checkbox' value='1' name='symptom11'>
+  <input type='hidden' value='0' name='symptom11'>
+  <label for="symptom11">Blister</label>
+  <br></br>
+  <input type='checkbox' value='1' name='symptom12'>
+  <input type='hidden' value='0' name='symptom12'>
+  <label for="symptom12">Blood in sputum</label>
+  <br></br>
+  <input type='checkbox' value='1' name='symptom13'>
+  <input type='hidden' value='0' name='symptom13'>
+  <label for="symptom13">Bloody Stool</label>
+  <br></br>
+  <input type='checkbox' value='1' name='symptom14'>
+  <input type='hidden' value='0' name='symptom14'>
+  <label for="symptom14">Blurred and distorted vision</label>
+  <br></br>
+  <input type='checkbox' value='1' name='symptom15'>
+  <input type='hidden' value='0' name='symptom15'>
+  <label for="symptom15">Breathlessness</label>
+  <br></br>
+  <input type='checkbox' value='1' name='symptom16'>
+  <input type='hidden' value='0' name='symptom16'>
+  <label for="symptom16">Brittle nails</label>
+  <br></br>
+  <input type='checkbox' value='1' name='symptom17'>
+  <input type='hidden' value='0' name='symptom17'>
+  <label for="symptom17">Bruising</label>
+  <br></br>
+  <input type='checkbox' value='1' name='symptom18'>
+  <input type='hidden' value='0' name='symptom18'>
+  <label for="symptom18">Burning micturition</label>
+  <br></br>
+  <input type='checkbox' value='1' name='symptom19'>
+  <input type='hidden' value='0' name='symptom19'>
+  <label for="symptom19">Chest pain</label>
+    <br></br>
+  <input type='checkbox' value='1' name='symptom20'>
+  <input type='hidden' value='0' name='symptom20'>
+  <label for="symptom20">Chills</label>
+    <br></br>
+  <input type='checkbox' value='1' name='symptom21'>
+  <input type='hidden' value='0' name='symptom21'>
+  <label for="symptom21">Cold hands and feet</label>
+    <br></br>
+  <input type='checkbox' value='1' name='symptom22'>
+  <input type='hidden' value='0' name='symptom22'>
+  <label for="symptom22">coma</label>
+    <br></br>
+  <input type='checkbox' value='1' name='symptom23'>
+  <input type='hidden' value='0' name='symptom23'>
+  <label for="symptom23">congestion</label>
+    <br></br>
+  <input type='checkbox' value='1' name='symptom24'>
+  <input type='hidden' value='0' name='symptom24'>
+  <label for="symptom24">Constipation</label>
+    <br></br>
+  <input type='checkbox' value='1' name='symptom25'>
+  <input type='hidden' value='0' name='symptom25'>
+  <label for="symptom25">Continuous feel of urine</label>
+    <br></br>
+  <input type='checkbox' value='1' name='symptom26'>
+  <input type='hidden' value='0' name='symptom26'>
+  <label for="symptom26">Continuous sneezing</label>
+    <br></br>
+  <input type='checkbox' value='1' name='symptom27'>
+  <input type='hidden' value='0' name='symptom27'>
+  <label for="symptom27">Cough</label>
+    <br></br>
+  <input type='checkbox' value='1' name='symptom28'>
+  <input type='hidden' value='0' name='symptom28'>
+  <label for="symptom28">Cramps</label>
+    <br></br>
+  <input type='checkbox' value='1' name='symptom29'>
+  <input type='hidden' value='0' name='symptom29'>
+  <label for="symptom29">Dark Urine</label>
+    <br></br>
+  <input type='checkbox' value='1' name='symptom30'>
+  <input type='hidden' value='0' name='symptom30'>
+  <label for="symptom30">Dehydration</label>
+    <br></br>
+  <input type='checkbox' value='1' name='symptom31'>
+  <input type='hidden' value='0' name='symptom31'>
+  <label for="symptom31">Depression</label>
+    <br></br>
+  <input type='checkbox' value='1' name='symptom32'>
+  <input type='hidden' value='0' name='symptom32'>
+  <label for="symptom32">Diarrhea</label>
+      <br></br>
+  <input type='checkbox' value='1' name='symptom33'>
+  <input type='hidden' value='0' name='symptom33'>
+  <label for="symptom33">Dischromic patches</label>
+      <br></br>
+  <input type='checkbox' value='1' name='symptom34'>
+  <input type='hidden' value='0' name='symptom34'>
+  <label for="symptom34">Distention of abdomen</label>
+      <br></br>
+  <input type='checkbox' value='1' name='symptom35'>
+  <input type='hidden' value='0' name='symptom35'>
+  <label for="symptom35">Dizziness</label>
+      <br></br>
+  <input type='checkbox' value='1' name='symptom36'>
+  <input type='hidden' value='0' name='symptom36'>
+  <label for="symptom36">Drying and tingling lips</label>
+      <br></br>
+  <input type='checkbox' value='1' name='symptom37'>
+  <input type='hidden' value='0' name='symptom37'>
+  <label for="symptom37">Enlarged Thyroid</label>
+      <br></br>
+  <input type='checkbox' value='1' name='symptom38'>
+  <input type='hidden' value='0' name='symptom38'>
+  <label for="symptom38">Excessive hunger</label>
+      <br></br>
+  <input type='checkbox' value='1' name='symptom39'>
+  <input type='hidden' value='0' name='symptom39'>
+  <label for="symptom39">Extra marital contacts</label>
+      <br></br>
+  <input type='checkbox' value='1' name='symptom40'>
+  <input type='hidden' value='0' name='symptom40'>
+  <label for="symptom40">Family history</label>
+      <br></br>
+  <input type='checkbox' value='1' name='symptom41'>
+  <input type='hidden' value='0' name='symptom41'>
+  <label for="symptom41">Fast heart rate</label>
+      <br></br>
+  <input type='checkbox' value='1' name='symptom42'>
+  <input type='hidden' value='0' name='symptom42'>
+  <label for="symptom42">Fatigue</label>
+      <br></br>
+  <input type='checkbox' value='1' name='symptom43'>
+  <input type='hidden' value='0' name='symptom43'>
+  <label for="symptom43">Fluid overload</label>
+      <br></br>
+  <input type='checkbox' value='1' name='symptom44'>
+  <input type='hidden' value='0' name='symptom44'>
+  <label for="symptom44">Foul smell of urine</label>
+      <br></br>
+  <input type='checkbox' value='1' name='symptom45'>
+  <input type='hidden' value='0' name='symptom45'>
+  <label for="symptom45">Headache</label>
+      <br></br>
+  <input type='checkbox' value='1' name='symptom46'>
+  <input type='hidden' value='0' name='symptom46'>
+  <label for="symptom46">High Fever</label>
+      <br></br>
+  <input type='checkbox' value='1' name='symptom47'>
+  <input type='hidden' value='0' name='symptom47'>
+  <label for="symptom47">Hip joint pain</label>
+      <br></br>
+  <input type='checkbox' value='1' name='symptom48'>
+  <input type='hidden' value='0' name='symptom48'>
+  <label for="symptom48">History of alcohol consumption</label>
+      <br></br>
+  <input type='checkbox' value='1' name='symptom49'>
+  <input type='hidden' value='0' name='symptom49'>
+  <label for="symptom49">Increased appetite</label>
+      <br></br>
+  <input type='checkbox' value='1' name='symptom50'>
+  <input type='hidden' value='0' name='symptom50'>
+  <label for="symptom50">Indigestion</label>
+      <br></br>
+  <input type='checkbox' value='1' name='symptom51'>
+  <input type='hidden' value='0' name='symptom51'>
+  <label for="symptom51">Inflammatory nails</label>
+      <br></br>
+  <input type='checkbox' value='1' name='symptom52'>
+  <input type='hidden' value='0' name='symptom52'>
+  <label for="symptom52">Internal itching</label>
+  <!-- confirmed working above -->
+      <br></br>
+  <input type='checkbox' value='1' name='symptom53'>
+  <input type='hidden' value='0' name='symptom53'>
+  <label for="symptom53">Irregular sugar level</label>
+        <br></br>
+  <input type='checkbox' value='1' name='symptom54'>
+  <input type='hidden' value='0' name='symptom54'>
+  <label for="symptom54">Irritability</label>
+        <br></br>
+  <input type='checkbox' value='1' name='symptom55'>
+  <input type='hidden' value='0' name='symptom55'>
+  <label for="symptom55">Irritation in anus</label>
+        <br></br>
+  <input type='checkbox' value='1' name='symptom56'>
+  <input type='hidden' value='0' name='symptom56'>
+  <label for="symptom56">Itching</label>
+        <br></br>
+  <input type='checkbox' value='1' name='symptom57'>
+  <input type='hidden' value='0' name='symptom57'>
+  <label for="symptom57">Joint pain</label>
+        <br></br>
+  <input type='checkbox' value='1' name='symptom58'>
+  <input type='hidden' value='0' name='symptom58'>
+  <label for="symptom58">Knee pain</label>
+        <br></br>
+  <input type='checkbox' value='1' name='symptom59'>
+  <input type='hidden' value='0' name='symptom59'>
+  <label for="symptom59">Lack of concentration</label>
+        <br></br>
+  <input type='checkbox' value='1' name='symptom60'>
+  <input type='hidden' value='0' name='symptom60'>
+  <label for="symptom60">Lethargy</label>
+        <br></br>
+  <input type='checkbox' value='1' name='symptom61'>
+  <input type='hidden' value='0' name='symptom61'>
+  <label for="symptom61">Loss of appetite</label>
+        <br></br>
+  <input type='checkbox' value='1' name='symptom62'>
+  <input type='hidden' value='0' name='symptom62'>
+  <label for="symptom62">Loss of balance</label>
+        <br></br>
+  <input type='checkbox' value='1' name='symptom63'>
+  <input type='hidden' value='0' name='symptom63'>
+  <label for="symptom63">Loss of smell</label>
+        <br></br>
+  <input type='checkbox' value='1' name='symptom64'>
+  <input type='hidden' value='0' name='symptom64'>
+  <label for="symptom64">Malaise</label>
+        <br></br>
+  <input type='checkbox' value='1' name='symptom65'>
+  <input type='hidden' value='0' name='symptom65'>
+  <label for="symptom65">Mild fever</label>
+        <br></br>
+  <input type='checkbox' value='1' name='symptom66'>
+  <input type='hidden' value='0' name='symptom66'>
+  <label for="symptom66">Mood swings</label>
+        <br></br>
+  <input type='checkbox' value='1' name='symptom67'>
+  <input type='hidden' value='0' name='symptom67'>
+  <label for="symptom67">Movement stiffness</label>
+        <br></br>
+  <input type='checkbox' value='1' name='symptom68'>
+  <input type='hidden' value='0' name='symptom68'>
+  <label for="symptom68">Mucoid sputum</label>
+        <br></br>
+  <input type='checkbox' value='1' name='symptom69'>
+  <input type='hidden' value='0' name='symptom69'>
+  <label for="symptom69">Muscle pain</label>
+        <br></br>
+  <input type='checkbox' value='1' name='symptom70'>
+  <input type='hidden' value='0' name='symptom70'>
+  <label for="symptom70">Muscle wasting</label>
+        <br></br>
+  <input type='checkbox' value='1' name='symptom71'>
+  <input type='hidden' value='0' name='symptom71'>
+  <label for="symptom71">Muscle weakness</label>
+        <br></br>
+  <input type='checkbox' value='1' name='symptom72'>
+  <input type='hidden' value='0' name='symptom72'>
+  <label for="symptom72">Nausea</label>
+          <br></br>
+  <input type='checkbox' value='1' name='symptom73'>
+  <input type='hidden' value='0' name='symptom73'>
+  <label for="symptom73">Neck pain</label>
+          <br></br>
+  <input type='checkbox' value='1' name='symptom74'>
+  <input type='hidden' value='0' name='symptom74'>
+  <label for="symptom74">Nodal skin eruptions</label>
+          <br></br>
+  <input type='checkbox' value='1' name='symptom75'>
+  <input type='hidden' value='0' name='symptom75'>
+  <label for="symptom75">Obesity</label>
+            <br></br>
+  <input type='checkbox' value='1' name='symptom76'>
+  <input type='hidden' value='0' name='symptom76'>
+  <label for="symptom76">Pain behind the eyes</label>
+            <br></br>
+  <input type='checkbox' value='1' name='symptom77'>
+  <input type='hidden' value='0' name='symptom77'>
+  <label for="symptom77">Pain during bowel movements</label>
+            <br></br>
+  <input type='checkbox' value='1' name='symptom78'>
+  <input type='hidden' value='0' name='symptom78'>
+  <label for="symptom78">Pain in anal region</label>
+            <br></br>
+  <input type='checkbox' value='1' name='symptom79'>
+  <input type='hidden' value='0' name='symptom79'>
+  <label for="symptom79">Painful walking</label>
+            <br></br>
+  <input type='checkbox' value='1' name='symptom80'>
+  <input type='hidden' value='0' name='symptom80'>
+  <label for="symptom80">Palpitations</label>
+            <br></br>
+  <input type='checkbox' value='1' name='symptom81'>
+  <input type='hidden' value='0' name='symptom81'>
+  <label for="symptom81">Passage of gases</label>
+            <br></br>
+  <input type='checkbox' value='1' name='symptom82'>
+  <input type='hidden' value='0' name='symptom82'>
+  <label for="symptom82">Patches in throat</label>
+            <br></br>
+  <input type='checkbox' value='1' name='symptom83'>
+  <input type='hidden' value='0' name='symptom83'>
+  <label for="symptom83">Phlegm</label>
+            <br></br>
+  <input type='checkbox' value='1' name='symptom84'>
+  <input type='hidden' value='0' name='symptom84'>
+  <label for="symptom84">Polyuria</label>
+            <br></br>
+  <input type='checkbox' value='1' name='symptom85'>
+  <input type='hidden' value='0' name='symptom85'>
+  <label for="symptom85">Prominent veins on calf</label>
+            <br></br>
+  <input type='checkbox' value='1' name='symptom86'>
+  <input type='hidden' value='0' name='symptom86'>
+  <label for="symptom86">Puffy face and eyes</label>
+            <br></br>
+  <input type='checkbox' value='1' name='symptom87'>
+  <input type='hidden' value='0' name='symptom87'>
+  <label for="symptom87">Pus filled pimples</label>
+            <br></br>
+  <input type='checkbox' value='1' name='symptom88'>
+  <input type='hidden' value='0' name='symptom88'>
+  <label for="symptom88">Receiving blood transfusion</label>
+            <br></br>
+  <input type='checkbox' value='1' name='symptom89'>
+  <input type='hidden' value='0' name='symptom89'>
+  <label for="symptom89">Receiving unsterile injections</label>
+              <br></br>
+  <input type='checkbox' value='1' name='symptom90'>
+  <input type='hidden' value='0' name='symptom90'>
+  <label for="symptom90">Red sore around nose</label>
+                <br></br>
+  <input type='checkbox' value='1' name='symptom91'>
+  <input type='hidden' value='0' name='symptom91'>
+  <label for="symptom91">red spots over body</label>
+                  <br></br>
+  <input type='checkbox' value='1' name='symptom92'>
+  <input type='hidden' value='0' name='symptom92'>
+  <label for="symptom92">redness of eyes</label>
+                  <br></br>
+  <input type='checkbox' value='1' name='symptom93'>
+  <input type='hidden' value='0' name='symptom93'>
+  <label for="symptom93">restlessness</label>
+    <br></br>
+<input type='checkbox' value='1' name='symptom94'>
+  <input type='hidden' value='0' name='symptom94'>
+  <label for="symptom94">runny nose</label> 
+  <br></br>
+<input type='checkbox' value='1' name='symptom95'>
+  <input type='hidden' value='0' name='symptom95'>
+  <label for="symptom95">rusty sputum</label> 
+  <br></br>
+<input type='checkbox' value='1' name='symptom96'>
+  <input type='hidden' value='0' name='symptom96'>
+  <label for="symptom96">scurring</label> 
+  <br></br>
+<input type='checkbox' value='1' name='symptom97'>
+  <input type='hidden' value='0' name='symptom97'>
+  <label for="symptom97">shivering</label> 
+  <br></br>
+<input type='checkbox' value='1' name='symptom98'>
+  <input type='hidden' value='0' name='symptom98'>
+  <label for="symptom98">silver like dusting</label> 
+  <br></br>
+  <input type='checkbox' value='1' name='symptom99'>
+  <input type='hidden' value='0' name='symptom99'>
+  <label for="symptom99">sinus pressure</label> 
+  <br></br>
+  <!-- confirmed working below -->
+<input type='checkbox' value='1' name='symptom100'>
+  <input type='hidden' value='0' name='symptom100'>
+  <label for="symptom100">skin peeling</label> 
+  <br></br>
+<input type='checkbox' value='1' name='symptom101'>
+  <input type='hidden' value='0' name='symptom101'>
+  <label for="symptom101">skin rash</label> 
+  <br></br>
+  <input type='checkbox' value='1' name='symptom102'>
+  <input type='hidden' value='0' name='symptom102'>
+  <label for="symptom102">slurred speech</label> 
+  <br></br>
+<input type='checkbox' value='1' name='symptom103'>
+  <input type='hidden' value='0' name='symptom103'>
+  <label for="symptom103">small dents in nails</label> 
+  <br></br>
+<input type='checkbox' value='1' name='symptom104'>
+  <input type='hidden' value='0' name='symptom104'>
+  <label for="symptom104">spinning movements</label> 
+  <br></br>
+<input type='checkbox' value='1' name='symptom105'>
+  <input type='hidden' value='0' name='symptom105'>
+  <label for="symptom105">spotting urination</label> 
+  <br></br>
+<input type='checkbox' value='1' name='symptom106'>
+  <input type='hidden' value='0' name='symptom106'>
+  <label for="symptom106">stiff neck</label> 
+  <br></br>
+<input type='checkbox' value='1' name='symptom107'>
+  <input type='hidden' value='0' name='symptom107'>
+  <label for="symptom107">stomach bleeding</label> 
+  <br></br>
+<input type='checkbox' value='1' name='symptom108'>
+  <input type='hidden' value='0' name='symptom108'>
+  <label for="symptom108">stomach pain</label> 
+  <br></br>
+<input type='checkbox' value='1' name='symptom109'>
+  <input type='hidden' value='0' name='symptom109'>
+  <label for="symptom109">sunken eyes</label> 
+  <br></br>
+<input type='checkbox' value='1' name='symptom110'>
+  <input type='hidden' value='0' name='symptom110'>
+  <label for="symptom110">Sweating</label> 
+  <br></br>
+<input type='checkbox' value='1' name='symptom111'>
+  <input type='hidden' value='0' name='symptom111'>
+  <label for="symptom111">Swelled lymph nodes</label> 
+  <br></br>
+<input type='checkbox' value='1' name='symptom112'>
+  <input type='hidden' value='0' name='symptom112'>
+  <label for="symptom112">Swelling joints</label> 
+  <br></br>
+<input type='checkbox' value='1' name='symptom113'>
+  <input type='hidden' value='0' name='symptom113'>
+  <label for="symptom113">Swelling of stomach</label> 
+  <br></br>
+  <input type='checkbox' value='1' name='symptom114'>
+  <input type='hidden' value='0' name='symptom114'>
+  <label for="symptom114">Swollen blood vessels</label> 
+  <br></br>
+  <input type='checkbox' value='1' name='symptom115'>
+  <input type='hidden' value='0' name='symptom115'>
+  <label for="symptom115">Swollen extremeties</label> 
+  <br></br>
+  <input type='checkbox' value='1' name='symptom116'>
+  <input type='hidden' value='0' name='symptom116'>
+  <label for="symptom116">Swollen legs</label> 
+  <br></br>
+  <input type='checkbox' value='1' name='symptom117'>
+  <input type='hidden' value='0' name='symptom117'>
+  <label for="symptom117">Throat irritation</label> 
+  <br></br>
+  <input type='checkbox' value='1' name='symptom118'>
+  <input type='hidden' value='0' name='symptom118'>
+  <label for="symptom118">Toxic look (typhos)</label> 
+  <br></br>
+  <input type='checkbox' value='1' name='symptom119'>
+  <input type='hidden' value='0' name='symptom119'>
+  <label for="symptom119">Ulcers on tongue</label> 
+  <br></br>
+  <input type='checkbox' value='1' name='symptom120'>
+  <input type='hidden' value='0' name='symptom120'>
+  <label for="symptom120">Unsteadiness</label> 
+  <br></br>
+  <input type='checkbox' value='1' name='symptom121'>
+  <input type='hidden' value='0' name='symptom121'>
+  <label for="symptom121">Visual disturbances</label> 
+  <br></br>
+  <input type='checkbox' value='1' name='symptom122'>
+  <input type='hidden' value='0' name='symptom122'>
+  <label for="symptom122">Vomiting</label> 
+  <br></br>
+  <input type='checkbox' value='1' name='symptom123'>
+  <input type='hidden' value='0' name='symptom123'>
+  <label for="symptom123">Watering from eyes</label> 
+  <br></br>
+  <input type='checkbox' value='1' name='symptom124'>
+  <input type='hidden' value='0' name='symptom124'>
+  <label for="symptom124">Weakness in limbs</label> 
+  <br></br>
+  <input type='checkbox' value='1' name='symptom125'>
+  <input type='hidden' value='0' name='symptom125'>
+  <label for="symptom125">Weakness of one body side</label> 
+  <br></br>
+  <input type='checkbox' value='1' name='symptom126'>
+  <input type='hidden' value='0' name='symptom126'>
+  <label for="symptom126">Weight gain</label> 
+  <br></br>
+  <input type='checkbox' value='1' name='symptom127'>
+  <input type='hidden' value='0' name='symptom127'>
+  <label for="symptom127">Weight loss</label>
+  <br></br>
+  <input type='checkbox' value='1' name='symptom128'>
+  <input type='hidden' value='0' name='symptom128'>
+  <label for="symptom128">Yellow crust ooze</label>
+  <br></br>
+  <input type='checkbox' value='1' name='symptom129'>
+  <input type='hidden' value='0' name='symptom129'>
+  <label for="symptom129">Yellow urine</label>
+  <br></br>
+  <input type='checkbox' value='1' name='symptom130'>
+  <input type='hidden' value='0' name='symptom130'>
+  <label for="symptom130">Yellowing of eyes</label>
+  <br></br>
+  <input type='checkbox' value='1' name='symptom131'>
+  <input type='hidden' value='0' name='symptom131'>
+  <label for="symptom131">Yellowish skin</label>   
+
+  
+  
+  <input type="submit">
+</form>
+
+
+
+{% endblock %}
+
+<!-- abdominal pain,abnormal menstruation,acidity,acute liver failure,altered sensorium,anxiety,back pain,belly pain,blackheads,bladder discomfort,blister,blood in sputum,bloody stool,blurred and distorted vision,breathlessness,brittle nails,bruising,burning micturition,chest pain,chills,cold hands and feets,coma,congestion,constipation,continuous feel of urine,continuous sneezing,cough,cramps,dark urine,dehydration,depression,diarrhoea,dischromic patches,distention of abdomen,dizziness,drying and tingling lips,enlarged thyroid,excessive hunger,extra marital contacts,family history,fast heart rate,fatigue,fluid overload,foul smell of urine,headache,high fever,hip joint pain,history of alcohol consumption,increased appetite,indigestion,inflammatory nails,internal itching,irregular sugar level,irritability,irritation in anus,itching,joint pain,knee pain,lack of concentration,lethargy,loss of appetite,loss of balance,loss of smell,malaise,mild fever,mood swings,movement stiffness,mucoid sputum,muscle pain,muscle wasting,muscle weakness,nausea,neck pain,nodal skin eruptions,obesity,pain behind the eyes,pain during bowel movements,pain in anal region,painful walking,palpitations,passage of gases,patches in throat,phlegm,polyuria,prominent veins on calf,puffy face and eyes,pus filled pimples,receiving blood transfusion,receiving unsterile injections,red sore around nose,red spots over body,redness of eyes,restlessness,runny nose,rusty sputum,scurring,shivering,silver like dusting,sinus pressure,skin peeling,skin rash,slurred speech,small dents in nails,spinning movements,spotting urination,stiff neck,stomach bleeding,stomach pain,sunken eyes,sweating,swelled lymph nodes,swelling joints,swelling of stomach,swollen blood vessels,swollen extremeties,swollen legs,throat irritation,toxic look (typhos),ulcers on tongue,unsteadiness,visual disturbances,vomiting,watering from eyes,weakness in limbs,weakness of one body side,weight gain,weight loss,yellow crust ooze,yellow urine,yellowing of eyes,yellowish skin -->
