@@ -45,13 +45,16 @@ def render_diagnosis_result():
         for col in inputTemplate.columns:
           inputDict[col] = [request.args['symptom' + str(i)]]
           if request.args['symptom' + str(i)] == '1':
-            inputString += col.replace("_", " ") + " "
+            inputString += col.replace("_", " ") + ", "
           i += 1
 
-        p, w, a = diagnosis(inputDict)
+          inputString.rstrip()
+          changedString = inputString[:-2] + "."
+
+        p, w, a, l = diagnosis(inputDict)
 
 
-        return render_template('diagnosis_result.html', disease = p, warning = w, advice = a, input = inputString)
+        return render_template('diagnosis_result.html', disease = p, warning = w, advice = a, input = changedString, link = l)
 
     except ValueError:
 
@@ -127,10 +130,13 @@ def diagnosis(dictionaryOfInput):
   for i in range(41):
     if arrayDesc[i][0].replace(" ", "").lower() == prediction[0].replace(" ", "").lower():
       warning = arrayDesc[i][1]
+      link = arrayDesc[i][2]
       for x in range(1,5):
         advice += arrayPre[i][x] + ", "
 
-  return prediction[0], warning, advice
+  advice = advice[:-2] + "."
+
+  return prediction[0], warning, advice, link
   # # Useful functions
   # symptomList = []
   # weightList = []

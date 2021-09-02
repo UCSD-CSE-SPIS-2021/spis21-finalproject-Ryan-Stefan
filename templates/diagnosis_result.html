@@ -5,12 +5,11 @@
 {% block title %}Your disease is:{% endblock %}
 
 
-
 {% block content %}
 
-<p> Your symptoms: {{ input }}. </p>
-<p> Your disease: {{ disease }}. </p>
+<font size = "25"><center><p> Your symptoms were selected as: {{ input }} </p>
+<p><b>Your disease: {{ disease }}.</b></p>
 <p> {{warning}} </p>
-<p> {{advice}} </p>
-
+<p> Our advice: {{advice}} </p>
+<p> Want more information? Check out:</p> <a href={{link}}>{{disease}}</a></center></font>
 {% endblock %}
