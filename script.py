@@ -92,6 +92,10 @@ def diagnosis(dictionaryOfInput):
   # Split test and train
   xTrain, xTest, yTrain, yTest = train_test_split(x, y, test_size=0.20, random_state = 0)
 
+  clf = RandomForestClassifier(criterion = 'entropy')
+  clf.fit(xTrain, yTrain)
+  predictThis = clf.predict(xTest)
+
   # DF = pd.DataFrame(xTrain)
   # DF.to_csv(path_or_buf='test/xTrain.csv', index=False)
 
@@ -108,9 +112,7 @@ def diagnosis(dictionaryOfInput):
 
   # Begin classification
 
-  clf = RandomForestClassifier(criterion = 'entropy')
-  clf.fit(xTrain, yTrain)
-  predictThis = clf.predict(xTest)
+ 
 
   #Useful metrics
 
